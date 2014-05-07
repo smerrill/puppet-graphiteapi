@@ -1,0 +1,13 @@
+search_index: <%= @
+finders:
+  - graphite_api.finders.whisper.WhisperFinder
+functions:
+  - graphite_api.functions.SeriesFunctions
+  - graphite_api.functions.PieFunctions
+whisper:
+  directories:
+<%- @directories.each do |d| -%>
+    - <%= d %>
+<%- end -%>
+time_zone: America/New_York
+
