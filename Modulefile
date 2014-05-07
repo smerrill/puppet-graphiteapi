@@ -9,4 +9,5 @@ project_page  'UNKNOWN'
 
 dependency 'puppetlabs/stdlib'
 dependency 'stankevich/python'
+dependency 'stahnma/epel'
 dependency 'ajcrowe/supervisord'
