@@ -20,8 +20,8 @@ class graphiteapi (
 
   # validate parameters here
 
-  class { 'graphite::install': } ->
-  class { 'graphite::config': } ~>
-  class { 'graphite::service': } ->
-  Class['graphite']
+  class { 'graphiteapi::install': } ->
+  class { 'graphiteapi::config': } ~>
+  class { 'graphiteapi::service': } ->
+  Class['graphiteapi']
 }

@@ -12,6 +12,7 @@ class graphiteapi::params {
       $whisper_paths = ['/var/lib/carbon/whisper']
       $graphiteapi_tz = 'America/New_York'
       $graphiteapi_search_index = '/srv/graphiteapi_index'
+      $graphiteapi_log_path = '/var/log/gunicorn-graphite-api.log'
       $create_search_index = true
     }
     default: {
