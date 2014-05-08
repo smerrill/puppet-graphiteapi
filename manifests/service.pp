@@ -9,13 +9,4 @@ class graphiteapi::service {
     stderr_logfile => $graphiteapi_log_path,
     user           => $graphiteapi_user,
   }
-
-  # @TODO: Steal config options from another module, or incorporate?
-  service { 'carbon-cache':
-    ensure => running,
-  }
-
-  service { 'carbon-aggregator':
-    ensure => running,
-  }
 }

@@ -17,10 +17,6 @@ class graphiteapi::install {
     }
   }
 
-  # Assume that this is provided by installing the python class.
-  Package['python-pip'] ->
-  package { ['python-carbon', 'python-whisper', 'python-gunicorn']: } ->
-
   # Install some Graphite API dependencies.
   package { ['cairo-devel', 'libffi-devel', 'libyaml-devel']: } ->
 
@@ -35,6 +31,7 @@ class graphiteapi::install {
   python::pip { 'gunicorn':
     virtualenv => '/opt/graphite-api/',
   }
+
   if $create_search_index == true {
     file { $graphiteapi_search_index:
       ensure => present,
