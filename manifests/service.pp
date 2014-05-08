@@ -1,6 +1,6 @@
 # == Class graphite::service
 #
-# Run the graphite web interface via supervisord.
+# Run the graphite API via supervisord.
 #
 class graphiteapi::service {
   supervisord::program { 'graphite-api-gunicorn':
