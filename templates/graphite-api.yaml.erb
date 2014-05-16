@@ -6,8 +6,8 @@ functions:
   - graphite_api.functions.PieFunctions
 whisper:
   directories:
-<%- @directories.each do |d| -%>
+<%- @whisper_paths.each do |d| -%>
     - <%= d %>
 <%- end -%>
-time_zone: America/New_York
+time_zone: <%= @graphiteapi_tz %>
 
