@@ -14,15 +14,15 @@
     },
     {
       "name": "stankevich/python",
-      "version_requirement": "~ 1.7.5"
+      "version_requirement": "~> 1.7.5"
     },
     {
       "name": "stahnma/epel",
-      "version_requirement": "~ 0.0.6"
+      "version_requirement": "~> 0.0.6"
     },
     {
       "name": "ajcrowe/supervisord",
-      "version_requirement": "~ 0.3.2"
+      "version_requirement": "~> 0.3.2"
     }
   ],
   "types": [
