@@ -1,0 +1,26 @@
+Vagrant.configure("2") do |config|
+  config.vm.provider "docker" do |d, override|
+    d.image = "smerrill/vagrant-centos"
+    d.has_ssh = true
+
+    # This is needed if you have non-Docker provisioners in the Vagrantfile.
+    override.vm.box = nil
+
+    # Ensure Vagrant knows the SSH port. See
+    # https://github.com/mitchellh/vagrant/issues/3772.
+    override.ssh.port = 22
+  end
+
+  config.vm.synced_folder "..", "/etc/puppet/modules/graphite_api"
+
+  config.vm.provision :shell, path: 'puppet.sh'
+
+  config.vm.provision :puppet do |puppet|
+    puppet.module_path = ["modules", "custom"]
+    puppet.manifests_path = "manifests"
+    puppet.manifest_file  = "site.pp"
+    puppet.hiera_config_path  = "hiera.yaml"
+    puppet.working_directory  = "/vagrant"
+  end
+end
+
