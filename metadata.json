@@ -1,0 +1,75 @@
+{
+  "name": "smerrill-graphiteapi",
+  "version": "0.1.0",
+  "source": "UNKNOWN",
+  "author": "smerrill",
+  "license": "Apache License, Version 2.0",
+  "summary": "UNKNOWN",
+  "description": "UNKNOWN",
+  "project_page": "UNKNOWN",
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib"
+    },
+    {
+      "name": "stankevich/python"
+    },
+    {
+      "name": "stahnma/epel"
+    },
+    {
+      "name": "ajcrowe/supervisord"
+    }
+  ],
+  "types": [
+
+  ],
+  "requirements": [
+    {
+      "name": "pe",
+      "version_requirement": "3.x"
+    },
+    {
+      "name": "puppet",
+      "version_requirement": "3.x"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": ["6.0"]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": ["6.0"]
+    }
+  ],
+  "checksums": {
+    "CHANGELOG": "3f30991014ef4131fb9864fbccd2bee4",
+    "CONTRIBUTING.md": "ec539f7912da25760720eebf9756ae65",
+    "CONTRIBUTORS": "2663ab97e5dd06abaa5ad17e33ef5470",
+    "Gemfile": "c5e82cfa4d1e1561518c00bee7ba5ef1",
+    "Guardfile": "3ae8d9a61b870350cc1c8e0d6a9a36e7",
+    "LICENSE": "47bbee59c4c1cb14cc3667035a227be0",
+    "Modulefile": "993f5d1ab613aee8f614508a7fbfc17a",
+    "README.markdown": "28fbf7242b49901e328b16dc9d33599a",
+    "Rakefile": "08cf234d01467acc67062d3853d70bcd",
+    "manifests/config.pp": "0c877ce2a5ed6d8d225c4fcf54f44ffc",
+    "manifests/init.pp": "e16420d8890a732b13cdc462f6dbb2a2",
+    "manifests/install.pp": "7f859ced909dc50494a5714f09ee6d29",
+    "manifests/params.pp": "099034b3c0abbfca66c5ac66190b46ac",
+    "manifests/service.pp": "572256fe7061d8f82a3051c357ad622b",
+    "spec/acceptance/class_spec.rb": "bce77f36c1f4121eadbec0c552a72d27",
+    "spec/acceptance/nodesets/centos-64-x64.yml": "7ad72bad9087a52f30c6f7d5600b68dd",
+    "spec/acceptance/nodesets/default.yml": "1091bb0897dc8ee94a391ab1d8e45132",
+    "spec/acceptance/nodesets/ubuntu-server-12042-x64.yml": "1091bb0897dc8ee94a391ab1d8e45132",
+    "spec/classes/coverage_spec.rb": "5b6dfa0dd426aca0ccfae23c0a629f0b",
+    "spec/classes/example_spec.rb": "130e758e07721a489dcd1367333e4cb7",
+    "spec/spec_helper.rb": "0db89c9a486df193c0e40095422e19dc",
+    "spec/spec_helper_acceptance.rb": "aa1b26be163bbd20ac9fff1f06f7b1e4",
+    "templates/graphite-api.yaml.erb": "9d7965db2258a02a79c8753169e8a1a1",
+    "tests/init.pp": "361674310cf79a3aaf1e721d28e32f8f",
+    "vagrant-test/Vagrantfile": "d13d6a1c3b6197514f8c54001ac901ce",
+    "vagrant-test/puppet.sh": "f5540075b4bb3d137db452ce22098a97"
+  }
+}
