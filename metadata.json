@@ -1,24 +1,28 @@
 {
-  "name": "smerrill-graphiteapi",
+  "name": "stevenmerrill-graphiteapi",
   "version": "0.1.0",
   "source": "UNKNOWN",
-  "author": "smerrill",
+  "author": "stevenmerrill",
   "license": "Apache License, Version 2.0",
   "summary": "UNKNOWN",
   "description": "UNKNOWN",
   "project_page": "UNKNOWN",
   "dependencies": [
     {
-      "name": "puppetlabs/stdlib"
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 3.2.0"
     },
     {
-      "name": "stankevich/python"
+      "name": "stankevich/python",
+      "version_requirement": "~ 1.7.5"
     },
     {
-      "name": "stahnma/epel"
+      "name": "stahnma/epel",
+      "version_requirement": "~ 0.0.6"
     },
     {
-      "name": "ajcrowe/supervisord"
+      "name": "ajcrowe/supervisord",
+      "version_requirement": "~ 0.3.2"
     }
   ],
   "types": [
