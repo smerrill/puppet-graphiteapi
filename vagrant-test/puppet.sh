@@ -1,7 +1,7 @@
 #!/bin/bash
 
 rpmquery puppet --quiet && {
-  yum -y update puppet
+  exit 0
 } || {
   yum -y localinstall http://yum.puppetlabs.com/puppetlabs-release-el-6.noarch.rpm
   yum -y install puppet-3.4.3 facter hiera

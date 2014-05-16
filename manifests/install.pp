@@ -18,7 +18,7 @@ class graphiteapi::install {
   }
 
   # Install some Graphite API dependencies.
-  package { ['cairo-devel', 'libffi-devel', 'libyaml-devel']: } ->
+  package { ['cairo-devel', 'libffi-devel', 'libyaml-devel', 'libtool']: } ->
 
   # Install graphite-api in a virtualenv.
   python::virtualenv { '/opt/graphite-api/':
@@ -26,10 +26,10 @@ class graphiteapi::install {
     version => 'system',
   } ->
   python::pip { 'graphite-api':
-    virtualenv => '/opt/graphite-api/',
+    virtualenv => $graphiteapi::virtualenv_path,
   } ->
   python::pip { 'gunicorn':
-    virtualenv => '/opt/graphite-api/',
+    virtualenv => $graphiteapi::virtualenv_path,
   }
 
   if $create_search_index == true {

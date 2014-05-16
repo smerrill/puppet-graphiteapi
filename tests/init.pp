@@ -9,4 +9,9 @@
 # Learn more about module testing here:
 # http://docs.puppetlabs.com/guides/tests_smoke.html
 #
+class { 'supervisord':
+  executable => '/usr/bin/supervisord',
+  executable_ctl => '/usr/bin/supervisorctl',
+}
+include epel
 include graphiteapi

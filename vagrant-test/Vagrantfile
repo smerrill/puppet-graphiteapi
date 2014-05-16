@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, path: 'puppet.sh'
 
   config.vm.provision :puppet do |puppet|
-    puppet.module_path = "/etc/puppet/modules"
+    puppet.module_path = "/etc/puppet/"
     puppet.manifests_path = "../tests"
     puppet.manifest_file  = "init.pp"
   end
