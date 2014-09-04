@@ -5,7 +5,7 @@ class graphiteapi::install {
 
   # EPEL is needed for the packages.
   Package {
-    require => [Class['epel'], Class['python']],
+    require => Class['epel'],
   }
 
   # @TODO: Decouple this a bit if possible.
@@ -21,10 +21,10 @@ class graphiteapi::install {
   package { ['cairo-devel', 'libffi-devel', 'libyaml-devel', 'libtool']: } ->
 
   # Install graphite-api in a virtualenv.
-  python::virtualenv { '/opt/graphite-api/':
+  python::virtualenv { $graphiteapi::virtualenv_path:
     ensure  => present,
     version => 'system',
-  } ->
+  }
   python::pip { 'graphite-api':
     virtualenv => $graphiteapi::virtualenv_path,
   } ->
