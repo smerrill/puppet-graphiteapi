@@ -3,7 +3,10 @@
 # This class is meant to be called from graphite
 # It sets variables according to platform
 #
-class graphiteapi::params {
+class graphiteapi::params ( 
+  $bind_addr = '127.0.0.1',
+  $bind_port = '8080',
+) {
   case $::osfamily {
     'RedHat', 'Amazon': {
       $graphiteapi_user  = 'nobody'
