@@ -16,6 +16,9 @@ class graphiteapi (
   $graphiteapi_search_index = $graphiteapi::params::graphiteapi_search_index,
   $graphiteapi_log_path = $graphiteapi::params::graphiteapi_log_path,
   $create_search_index = $graphiteapi::params::create_search_index,
+  $bind_addr = $graphiteapi::params::bind_addr,
+  $bind_port = $graphiteapi::params::bind_port,
+
 ) inherits graphiteapi::params {
 
   # validate parameters here
